@@ -1,0 +1,11 @@
+
+Day-1: JS/OOPS/Java/ReactJS
+Day-2: NodeJS/ReactJS (Components)
+Day-3: ReactJS + Scaling/ Nested components
+Day-4: SPA / Routes / Scaling
+Day-5: Services / REST (API) (AJAX) /CRUD in ReactJS
+Day-6: React Native Basics +  Fundamentals
+Day-7: Scaling with React Native (CRUD)
+Day-8: Modules + GUI ( third-party-libs)
+Day-9: Native libs / Features
+Day-10: Bridge+ Practice Session + Testing
