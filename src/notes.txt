@@ -1,0 +1,8 @@
+----------------------------------
+
+* JS is single threaded.
+* Only way to delay,sleep etc => setTimeout(fn,miliS)
+* setTimeout takes fn callback so calling fn will not work.
+* Differnece between JS Function & Function Call
+
+------------------------------------

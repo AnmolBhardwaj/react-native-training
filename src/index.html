@@ -1,11 +1,53 @@
-<html>
+<!-- <html>
     <head>
         <title>Day-1</title>
     </head>
     <body>
+    <script type="text/javascript">
+    print = function (msg){
+        console.log(msg);
+    }
+        secondCount = function (src,count){
+            for(var i=0;i<=count;i++){
+                console.log(print(src)+":"+ i +"seconds over");
+            }
+        }
+    
+    </script>
         <form>
             <input type="" value="Native">
-            <button value='submit'>Login</button>
+            <input type="" value="React">
+            <input type="button" value="B2" onclick="secondCount('B1',20)">
+            <input type="button" value="Nat3" onclick="secondCount('nAT3',10)">
         </form>
     </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+		print= function(msg){
+            
+            return function(){ console.log(msg) }
+		}
+		secondCounter = function(src,count){
+			for (var i = 0; i < count; i++) {
+                
+			    setTimeout(print(src +": "+i +" seconds are over."),1000*i);
+			}
+        }
+        
+	</script>
+	<form>
+		<input type="" name="" value="Hello World">
+		<input type="" name="" value="India">
+		<input type="button" name="" value="B1" onclick="secondCounter('B1',10)">
+		<input id ="b2" type="button" name="" value="B2" onclick="secondCounter('B2',5)">
+
+	</form>
+</body>
 </html>
