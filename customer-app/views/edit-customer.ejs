@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script type="text/javascript">
+  		addCustomer=function(){
+          var customer = {};
+          customer.id=$("#id").val();
+          customer.name=$("#name").val();
+          customer.email=$("#email").val();
+          customer.address=$("#address").val();
+          customer.phone=$("#phone").val();
+          $.ajax({
+          type: "PUT",
+          url: "/api/customers",
+          data: customer,
+          success: function(data){
+            console.log(JSON.stringify(data));
+            if(data.result == "success"){
+              //alert("login success ");
+              location = "/customers";
+            }
+          }
+        });
+      }
+  	</script>
+    <h1><%= title %></h1>
+    <p>Welcome to CustomerApp</p>
+    <input id="id" type="text" name="" placeholder="id" value="<%= customer.id %>" readonly><br/><br/>
+    <input id="name" type="text" name="" placeholder="name" value="<%= customer.name %>" ><br/><br/>
+    <input id="email" type="" name="" placeholder="email" value="<%= customer.email %>" ><br/><br/>
+    <input id="address" type="" name="" placeholder="address"  value="<%= customer.address %>" ><br/><br/>
+    <input id="phone" type="" name="" placeholder="phone"  value="<%= customer.phone %>" ><br/><br/>
+    <input type="button" name="" onclick="addCustomer()" value="Update Customer">
+  </body>
+</html>
