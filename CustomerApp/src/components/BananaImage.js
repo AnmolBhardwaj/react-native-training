@@ -7,7 +7,7 @@ export default class Bananas extends Component {
       uri: 'https://syndicode.com/wp-content/uploads/2017/07/React-Native-for-iOS-developers1-e1499675479381-700x700-c-default.png'
     };
     return (
-      <Image source={pic} style={{width: 193, height: 110}}/>
+      <Image source={pic} style={{width: 300, height: 500, margin: 48}}/>
     );
   }
 }
