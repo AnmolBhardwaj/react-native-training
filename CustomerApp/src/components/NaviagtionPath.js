@@ -7,13 +7,15 @@ import Movies from './MoviesAPI';
 import Image from './BananaImage';
 import Flex from './FlexBasics';
 import AboutUs from './AboutUs';
+import Users from './Users';
 
 const AppNavigator = createStackNavigator({
        Login:Login,
        Movies:Movies,
        Image: Image,
        Flag: Flex,
-       AboutUs: AboutUs
+       AboutUs: AboutUs,
+       Users: Users
   },
   {
     initialRouteName: 'Login',

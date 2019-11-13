@@ -28,7 +28,7 @@ export default class Login extends Component {
     onLoginButton = () => {
         console.log(">> on login button");
         if (this.state.email == this.state.password) {
-            this.props.navigation.navigate('Movies');
+            this.props.navigation.navigate('Users');
             this.setState({
                 email: '',
                 password: ''
