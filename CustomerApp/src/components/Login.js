@@ -22,7 +22,9 @@ export default class Login extends Component {
         email: 'admin',
         password: 'admin'
     }
-
+    onClickFlag= () => {
+        this.props.navigation.navigate('AboutUs');
+    }
     onLoginButton = () => {
         console.log(">> on login button");
         if (this.state.email == this.state.password) {
@@ -74,6 +76,9 @@ export default class Login extends Component {
                 <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onLoginButton()}>
                     <Text style={styles.loginText}>Login</Text>
                 </TouchableHighlight>
+                <TouchableHighlight style={[styles.buttonContainer, styles.aboutusButton]} onPress={() => this.onClickFlag()}>
+                    <Text style={styles.loginText}>About Us</Text>
+                </TouchableHighlight>
             </View>
         );
     }
@@ -120,6 +125,9 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         backgroundColor: "#00b5ec",
+    },
+    aboutusButton: {
+        backgroundColor: "#00eeec",
     },
     loginText: {
         color: 'white',
