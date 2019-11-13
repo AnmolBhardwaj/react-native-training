@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TextInput,
-    Button,
-    TouchableHighlight,
-    Image,
-    Alert
-} from 'react-native';
+import { Container, Header, Content, Form, Item, Input, Label, Button,Text } from 'native-base';
+    
 
-export default class Login extends Component {
+export default class FloatingLabelExample extends Component {
 
     constructor(props) {
         super(props);
@@ -19,109 +11,44 @@ export default class Login extends Component {
         headerTitle: 'Login'
     };
     state = {
-        email: 'admin',
-        password: 'admin'
+        userName: '',
+        password: ''
     }
 
-    onLoginButton = () => {
-        console.log(">> on login button");
-        if (this.state.email == this.state.password) {
-            this.props.navigation.navigate('Movies');
-            this.setState({
-                email: '',
-                password: ''
-            });
+    onLoginButton = () =>{
 
-        } else {
-            alert('Username/Password should be admin/admin.');
-            this.props.navigation.navigate('Image');
+        if(this.state.userName == this.state.password){
+            this.props.navigation.navigate('Dashboard');
+            
         }
+
     }
+  render() {
 
-    onForgotText = () => {
-        //this.props.navigation.navigate('Forgot');
-    }
+    return (
+      <Container>
+        <Header />
+        <Content>
+          <Form>
+            <Item floatingLabel>
+              <Label>Username</Label>
+              <Input
+               value={this.state.userName}
+               onChangeText={(userName) => this.setState({ userName })} />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Password</Label>
+              <Input
+              value={this.state.password}
+              onChangeText={(password) => this.setState({ password })} />
+            </Item>
+            <Button bordered style={{width: 200, margin: 25, justifyContent: "center", alignSelf: "center"}}  onPress={() => this.onLoginButton()}>
+            <Text>Login</Text>
+          </Button>
+          </Form>
 
-    onRegister = () => {
-        //this.props.navigation.navigate('Register');
-    }
-
-    render() {
-        return (
-            <View style={styles.container}>
-                <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon}
-                        source={{ uri: 'http://35.154.2.160/react-native/user.png' }} />
-                    <TextInput style={styles.inputs}
-                        placeholder="Email"
-                        keyboardType="email-address"
-                        underlineColorAndroid='transparent'
-                        value={this.state.email}
-                        onChangeText={(email) => this.setState({ email })} />
-                </View>
-
-                <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon}
-                        source={{ uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db' }} />
-                    <TextInput style={styles.inputs}
-                        placeholder="Password"
-                        secureTextEntry={true}
-                        underlineColorAndroid='transparent'
-                        value={this.state.password}
-                        onChangeText={(password) => this.setState({ password })} />
-                </View>
-
-                <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onLoginButton()}>
-                    <Text style={styles.loginText}>Login</Text>
-                </TouchableHighlight>
-            </View>
-        );
-    }
+        </Content>
+      </Container>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#DCDCDC',
-    },
-    inputContainer: {
-        borderBottomColor: '#F5FCFF',
-        backgroundColor: '#FFFFFF',
-        borderRadius: 30,
-        borderBottomWidth: 1,
-        width: 250,
-        height: 45,
-        marginBottom: 20,
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    inputs: {
-        height: 45,
-        marginLeft: 16,
-        borderBottomColor: '#FFFFFF',
-        flex: 1,
-    },
-    inputIcon: {
-        width: 30,
-        height: 30,
-        marginLeft: 15,
-        justifyContent: 'center'
-    },
-    buttonContainer: {
-        height: 45,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 20,
-        width: 250,
-        borderRadius: 30,
-    },
-    loginButton: {
-        backgroundColor: "#00b5ec",
-    },
-    loginText: {
-        color: 'white',
-    }
-});

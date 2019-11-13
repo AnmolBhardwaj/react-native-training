@@ -23,10 +23,8 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Movies from './src/components/MoviesAPI'
-import FlexBasics from './src/components/FlexBasics'
-import Login from './src/components/Login'
-import Navigation from './src/components/NaviagtionPath'
+import Login from './src/components/Login';
+import Navigation from './src/components/NaviagtionPath';
 
 const App: () => React$Node = () => {
   return (
