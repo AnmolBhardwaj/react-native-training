@@ -33,7 +33,11 @@ export default class Profile extends Component {
       render() {
           return(
           <Container>
-          <Header />
+          <Header>
+            <Text>
+              Customer Profile
+            </Text>
+          </Header>
           <Content padder>
           {this.state.users.map(item => (
             <Card key={item.id}>

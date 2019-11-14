@@ -6,7 +6,8 @@ import Login from './Login';
 import Movies from './MoviesAPI';
 import Profile from './Profile';
 import Albums from './Albums';
-
+import AddCustomer from './AddCustomer';
+import EditCustomer from './EditCustomer'
 
 import Dashboard from './Dashboard';
 
@@ -15,7 +16,9 @@ const AppNavigator = createStackNavigator({
       Movies:Movies,
       Dashboard:Dashboard,
       Profile: Profile,
-      Albums:Albums
+      Albums:Albums,
+      AddCustomer:AddCustomer,
+      EditCustomer:EditCustomer,
   },
   {
     initialRouteName: 'Login',
