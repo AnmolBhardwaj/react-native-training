@@ -4,7 +4,9 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Login from './Login';
 import Movies from './MoviesAPI';
-import Profile from './Profile'
+import Profile from './Profile';
+import Albums from './Albums';
+
 
 import Dashboard from './Dashboard';
 
@@ -12,7 +14,8 @@ const AppNavigator = createStackNavigator({
       Login:Login,
       Movies:Movies,
       Dashboard:Dashboard,
-      Profile: Profile
+      Profile: Profile,
+      Albums:Albums
   },
   {
     initialRouteName: 'Login',
