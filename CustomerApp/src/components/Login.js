@@ -17,9 +17,11 @@ export default class FloatingLabelExample extends Component {
 
     onLoginButton = () =>{
 
-        if(this.state.userName == this.state.password){
-            this.props.navigation.navigate('Dashboard');
-            
+        if(this.state.userName == this.state.password && this.state.userName!=''){
+            this.props.navigation.navigate('Dashboard');   
+        }
+        else{
+          alert("Incorrect")
         }
 
     }
