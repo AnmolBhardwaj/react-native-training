@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Card, CardItem, Text, Body, Button } from "native-base";
+import { Container, Header, Content, Card, CardItem, Text, Body, Button , Badge, Icon} from "native-base";
 
 export default class Profile extends Component {
     constructor(props) {
@@ -33,10 +33,18 @@ export default class Profile extends Component {
       render() {
           return( 
             <Container>
-            <Header />
+            <Header>
+                <Text>
+                    User Albums
+                </Text>
+            </Header>
                 <Content padder>
-                {this.state.albums.map(item => (    
-                    <Text>{item.title}</Text>
+                {this.state.albums.map(item => (
+                     <Button bordered dark style={{  margin: 8, padding:8 }}>
+                   
+                     <Text style={{ color: 'steelblue' }}>{item.title}</Text>
+                   </Button>    
+                    
                 ))}
                 </Content>
                 </Container>
