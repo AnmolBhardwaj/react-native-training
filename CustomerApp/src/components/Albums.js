@@ -26,6 +26,10 @@ export default class Profile extends Component {
         });
       }
 
+      onClickAlbum(albumId){
+        this.props.navigation.navigate('Photos',albumId);
+      }
+
     //   onClickAlbums = (ind) => {
     //     this.props.navigation.navigate('Albums',ind);
     //   }
@@ -40,7 +44,7 @@ export default class Profile extends Component {
             </Header>
                 <Content padder>
                 {this.state.albums.map(item => (
-                     <Button bordered dark style={{  margin: 8, padding:8 }}>
+                     <Button bordered dark style={{  margin: 8, padding:8 }} onPress={()=>this.onClickAlbum(item.id)}>
                    
                      <Text style={{ color: 'steelblue' }}>{item.title}</Text>
                    </Button>    

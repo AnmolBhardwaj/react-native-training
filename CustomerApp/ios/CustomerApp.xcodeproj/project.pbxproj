@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* CustomerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CustomerAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -16,6 +17,7 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D8FAFB6237E705C00E88FB6 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FAFB5237E705C00E88FB6 /* Device.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* CustomerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CustomerAppTests.m */; };
 		6F407714AB991E88C731832A /* libPods-CustomerApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB0F8A2B649095C782A853D /* libPods-CustomerApp-tvOSTests.a */; };
 		8F5F1453AEF479CC6D56669C /* libPods-CustomerAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A96BA64B50F0C780490D9AA /* libPods-CustomerAppTests.a */; };
@@ -53,6 +55,8 @@
 		28C4C1106980A23D17152830 /* Pods-CustomerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerApp.release.xcconfig"; path = "Target Support Files/Pods-CustomerApp/Pods-CustomerApp.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* CustomerApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CustomerApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* CustomerApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CustomerApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D8FAFB4237E703500E88FB6 /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		2D8FAFB5237E705C00E88FB6 /* Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		5CF381075CFAB4DF468F6066 /* Pods-CustomerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomerAppTests/Pods-CustomerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A96BA64B50F0C780490D9AA /* libPods-CustomerAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomerAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F20C036372E225A2255973C /* Pods-CustomerApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CustomerApp-tvOS/Pods-CustomerApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* CustomerApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D8FAFB3237E701E00E88FB6 /* Device */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -147,7 +152,6 @@
 				5CF381075CFAB4DF468F6066 /* Pods-CustomerAppTests.debug.xcconfig */,
 				E09591DE5D1E6179A6E81ED0 /* Pods-CustomerAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,6 +166,15 @@
 				6A96BA64B50F0C780490D9AA /* libPods-CustomerAppTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D8FAFB3237E701E00E88FB6 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				2D8FAFB4237E703500E88FB6 /* Device.h */,
+				2D8FAFB5237E705C00E88FB6 /* Device.m */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -203,7 +216,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +329,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -585,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8FAFB6237E705C00E88FB6 /* Device.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);

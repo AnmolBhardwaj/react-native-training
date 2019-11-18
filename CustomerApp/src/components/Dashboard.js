@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Text, Body,Button } from "native-base";
+import {NativeModules} from'react-native';
 
 export default class Dashboard extends Component {
     constructor(props) {
@@ -13,6 +14,10 @@ export default class Dashboard extends Component {
       };
       componentDidMount(){
         console.log(">>>>> componentDidMount...");
+
+        NativeModules.Device.getDeviceName((err ,name) => {
+          console.log(err, name);
+        });
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((response) => response.json())
         .then((responseJson) => {

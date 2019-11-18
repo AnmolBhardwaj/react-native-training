@@ -8,6 +8,7 @@ import Profile from './Profile';
 import Albums from './Albums';
 import AddCustomer from './AddCustomer';
 import EditCustomer from './EditCustomer'
+import Photos from './Photos';
 
 import Dashboard from './Dashboard';
 
@@ -19,6 +20,7 @@ const AppNavigator = createStackNavigator({
       Albums:Albums,
       AddCustomer:AddCustomer,
       EditCustomer:EditCustomer,
+      Photos:Photos,
   },
   {
     initialRouteName: 'Login',
